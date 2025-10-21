@@ -1,0 +1,24 @@
+{
+  "name": "@chainplatform/appstore",
+  "version": "0.1.0",
+  "description": "@chainplatform/appstore",
+  "main": "index.js",
+  "author": "Chain Platform <santran686@gmail.com> (https://chainplatform.net/)",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-native-web",
+    "@chainplatform/appstore",
+    "appstore",
+    "App Store"
+  ],
+  "homepage": "https://github.com/ChainPlatform/AppStore",
+  "bugs": "https://github.com/ChainPlatform/AppStore/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ChainPlatform/AppStore.git"
+  },
+  "dependencies": {},
+  "peerDependencies": {}
+}
