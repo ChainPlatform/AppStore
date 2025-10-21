@@ -1,7 +1,7 @@
 {
   "name": "@chainplatform/appstore",
   "version": "0.1.0",
-  "description": "@chainplatform/appstore",
+  "description": "A lightweight, dependency-free global store with persistence, hydration, and subscription support — designed for React Native and Web environments. It lets you manage multiple namespaces (like `theme`, `user`, `settings`, etc) and persist them easily using your own storage backend.",
   "main": "index.js",
   "author": "Chain Platform <santran686@gmail.com> (https://chainplatform.net/)",
   "license": "MIT",
