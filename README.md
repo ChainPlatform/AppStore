@@ -3,6 +3,27 @@
 A lightweight, dependency-free global store with **persistence**, **hydration**, and **subscription** support — designed for React Native and Web environments.  
 It lets you manage multiple namespaces (like `theme`, `user`, `settings`, etc) and persist them easily using your own storage backend.
 
+<p align="center">
+  <a href="https://github.com/ChainPlatform/AppStore/blob/HEAD/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
+  </a>
+  <a href="https://www.npmjs.com/package/@chainplatform/appstore">
+    <img src="https://img.shields.io/npm/v/@chainplatform/appstore?color=brightgreen&label=npm%20package" />
+  </a>
+  <a href="https://www.npmjs.com/package/@chainplatform/appstore">
+    <img src="https://img.shields.io/npm/dt/@chainplatform/appstore.svg" />
+  </a>
+  <a href="https://www.npmjs.com/package/@chainplatform/appstore">
+    <img src="https://img.shields.io/badge/platform-android%20%7C%20ios%20%7C%20web-blue" />
+  </a>
+  <a href="https://github.com/ChainPlatform/AppStore/pulls">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  </a>
+  <a href="https://x.com/intent/follow?screen_name=doansan">
+    <img src="https://img.shields.io/twitter/follow/doansan.svg?label=Follow%20@doansan" alt="Follow @doansan"></img>
+  </a>
+</p>
+
 ---
 
 ## ✨ Features
@@ -69,11 +90,8 @@ const unsubscribe = themeStore.subscribe((newVal, oldVal) => {
   console.log("Theme changed:", newVal);
 });
 
-// Set or update data
+// Set data
 themeStore.set({ mode: "dark", primary: "#3498db" });
-
-// Replace entire object
-themeStore.replace({ mode: "light", primary: "#ff6600" });
 
 // Clear only in-memory data
 themeStore.clear();
@@ -121,7 +139,6 @@ Create or get a store by namespace.
 | Param | Type | Description |
 |--------|------|-------------|
 | `namespace` | `string` | Unique key for store (e.g. `"theme"`, `"user"`) |
-| `options` | `{ encrypted?: boolean }` | Optional encryption flag |
 
 Returns a `SingleStore` instance.
 
@@ -134,8 +151,7 @@ Returns a `SingleStore` instance.
 | `hydrate()` | Load stored data and mark as hydrated |
 | `subscribe(cb, { fireImmediately? })` | Listen for data changes |
 | `onHydrated(cb)` | Called once when hydration completes |
-| `set(partial)` | Merge and update partial data |
-| `replace(data)` | Replace entire state |
+| `set(data)` | Set data |
 | `clear()` | Clear in-memory data |
 | `clearStorage()` | Clear both in-memory and persistent storage |
 | `value` | Current store value |
